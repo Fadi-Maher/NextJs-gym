@@ -79,7 +79,8 @@ export default function PlayersList({ selectedPlayers, setSelectedPlayers }) {
   //update counter
 
   const updateSessions = async ({ id, sessions }) => {
-    const res = await fetch(`http://localhost:5000/players/${id}`, {
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/players/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sessions }),
