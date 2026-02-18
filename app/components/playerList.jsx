@@ -61,7 +61,8 @@ export default function PlayersList({ selectedPlayers, setSelectedPlayers }) {
 
   const handleDelete = async (playerId) => {
     try {
-      const res = await fetch(`http://localhost:5000/players/${playerId}`, {
+
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/players/${playerId}`, {
         method: "DELETE",
       });
       if (!res.ok) {
