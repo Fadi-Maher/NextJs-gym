@@ -164,7 +164,7 @@ export default function PlayersList({ selectedPlayers, setSelectedPlayers }) {
 
           <button
             onClick={handleSelectAll}
-            className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 bg-orange-600 text-white rounded-xl hover:bg-orange-700 transition-colors"
           >
             {filteredPlayers.length === selectedPlayers.length
               ? "Deselect All"
