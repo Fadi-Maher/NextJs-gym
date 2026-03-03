@@ -5,6 +5,7 @@ import SendMessage from "./components/sendMsg";
 import { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { MessageSquare, Users, PlusCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function App() {
   const [selectedPlayers, setSelectedPlayers] = useState([]);
@@ -16,12 +17,26 @@ export default function App() {
         {/* Header */}
         <header className="mb-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="p-3 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl">
-              <Users className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Shape Shifter Management System
+            {/* <Users className="w-8 h-8 text-white" /> */}
+            <Image
+              className="rounded-2xl shadow-2xl"
+              src="/logo.png"
+              alt=""
+              width={90}
+              height={80}
+            />
+
+            <h1 className="text-4xl font-bold   bg-clip-text text-orange-500">
+              Shape Shifter 
             </h1>
+
+            <Image
+              className="rounded-2xl shadow-2xl"
+              src="/logo.png"
+              alt=""
+              width={90}
+              height={80}
+            />
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Manage your players and send them messages efficiently
@@ -33,9 +48,9 @@ export default function App() {
           <div className="bg-white rounded-2xl p-1 shadow-lg inline-flex">
             <button
               onClick={() => setActiveTab("players")}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 ${
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer ${
                 activeTab === "players"
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                  ? "   bg-orange-500 shadow-md "
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -44,9 +59,9 @@ export default function App() {
             </button>
             <button
               onClick={() => setActiveTab("add")}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 ${
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer ${
                 activeTab === "add"
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                  ? "   bg-orange-500 shadow-md cursor-pointer" 
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -55,9 +70,9 @@ export default function App() {
             </button>
             <button
               onClick={() => setActiveTab("message")}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 ${
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer ${
                 activeTab === "message"
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md"
+                   ? "   bg-orange-500 shadow-md cursor-pointer"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -106,7 +121,7 @@ export default function App() {
                           key={id}
                           className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg"
                         >
-                          <div className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold">
+                          <div className="w-8 h-8 bg-blue-100 text-orange-600 rounded-full flex items-center justify-center font-bold">
                             {index + 1}
                           </div>
                           <div className="text-sm font-medium text-gray-700">
@@ -186,16 +201,14 @@ export default function App() {
           },
         }}
       />
-<footer className="mt-16 mb-6 text-center">
-  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 shadow-sm">
-    <span className="text-sm text-gray-500">
-      Developed  by
-    </span>
-    <span className="text-sm font-semibold text-blue-600">
-      Fady Maher
-    </span>
-  </div>
-</footer>
+      <footer className="mt-16 mb-6 text-center">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 shadow-sm">
+          <span className="text-sm text-gray-500">Developed by</span>
+          <span className="text-sm font-semibold text-blue-600">
+            Fady Maher
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }

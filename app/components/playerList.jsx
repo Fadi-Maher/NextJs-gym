@@ -128,7 +128,7 @@ export default function PlayersList({ selectedPlayers, setSelectedPlayers }) {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
         <div className="flex items-center gap-3">
           <div className="p-2 bg-purple-50 rounded-lg">
-            <Users className="w-6 h-6 text-purple-600" />
+            <Users className="w-6 h-6 text-orange-600" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-800">Players List</h2>
@@ -198,9 +198,9 @@ export default function PlayersList({ selectedPlayers, setSelectedPlayers }) {
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold">
                     {player.name.charAt(0)}
-                  </div>
+                  </div> 
                   <div>
                     <h3 className="font-bold text-gray-800">{player.name}</h3>
                     <p className="text-sm text-gray-500">{player.phone}</p>
