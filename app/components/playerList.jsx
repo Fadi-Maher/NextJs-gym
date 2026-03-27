@@ -161,6 +161,7 @@ export default function PlayersList({ selectedPlayers, setSelectedPlayers }) {
             <Filter className="w-4 h-4" />
             {showSelectedOnly ? "Show All" : "Show Selected"}
           </button>
+          {""}
 
           <button
             onClick={handleSelectAll}
