@@ -16,8 +16,7 @@ export default function App() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         {""}
-        {""}
-        <header className="mb-10 text-center">
+         <header className="mb-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             {/* <Users className="w-8 h-8 text-white" /> */}
             <Image
