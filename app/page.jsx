@@ -15,6 +15,7 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
+        {""}
         <header className="mb-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             {/* <Users className="w-8 h-8 text-white" /> */}
